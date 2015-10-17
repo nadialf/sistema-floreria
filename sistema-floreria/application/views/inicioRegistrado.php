@@ -5,7 +5,7 @@
 <div class="container">
 
 	<div class="starter-template">
-		<h1>Bienvenido a Florería "El Girasol"!</h1>
+		<h1>Bienvenido a Florería "El Girasol"</h1>
 
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 

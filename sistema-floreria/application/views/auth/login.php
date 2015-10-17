@@ -1,9 +1,12 @@
+<div align="center" style="padding-top: 75px;">
+
 <h1><?php echo lang('login_heading');?></h1>
 <p><?php echo lang('login_subheading');?></p>
 
 <div id="infoMessage"><?php echo $message;?></div>
 
 <?php echo form_open("auth/login");?>
+
 
   <p>
     <?php echo lang('login_identity_label', 'identity');?>
@@ -26,3 +29,5 @@
 <?php echo form_close();?>
 
 <p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
+
+</div>

@@ -3,14 +3,12 @@
     <div class="container">
       
       <div class="navbar-header">
-        
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        
         <a class="navbar-brand" href="#">El Girasol</a>      
       </div>
       
@@ -61,7 +59,7 @@
           </li>
           
           <li>
-            <a>
+            <a href="<?=base_url()?>index.php/auth/logout">
               <span class="glyphicon glyphicon-remove-sign"></span>&nbsp;Salir
             </a>
           </li>
@@ -71,18 +69,3 @@
     </div>
   </nav>
 </header>
-
-<!-- <header>
-          <nav id="menu">
-              <ul>
-                  <li>
-                    <a href="#">Inicio</a></li>
-                  <li>
-                    <a>Agregar</a></li>
-                  <li>
-                    <a target="_blank">Buscar</a></li>
-                  <li>
-                    <a>Salir</a></li>
-              </ul>
-          </nav>
-</header> -->

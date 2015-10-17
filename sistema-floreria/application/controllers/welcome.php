@@ -11,7 +11,7 @@ class Welcome extends CI_Controller {
             redirect('auth/login'); //lo redirigimos al form de login
         } else {
         	$this->load->view('header');
-        	$this->load->view('vistaPrueba');
+        	$this->load->view('inicioRegistrado');
         	$this->load->view('footer');
         }
 	}

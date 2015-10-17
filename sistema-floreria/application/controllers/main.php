@@ -4,12 +4,12 @@ class Main extends CI_Controller{
 	
 	function __construct(){
 		parent::__construct();
-		$this->load->model('bookmarksModel');		
+		$this->load->model('floreriaModel');		
 	}
 	
 	public function index(){
 		$this->load->view('header');
-		$this->load->view('vistaPrueba');
+		$this->load->view('inicioRegistrado');
 		$this->load->view('footer');
 	}
 	

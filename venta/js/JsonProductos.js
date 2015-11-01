@@ -27,7 +27,7 @@ $(document).ready(function(){
 			var seleccion = "categoria";
 
 
-			var nuevaFila = "<option value='"+ObjetoReturn.id+"' "+seleccion+">" + ObjetoReturn.descripcion+"</option>";
+			var nuevaFila = "<option value='"+ObjetoReturn.id+" "+seleccion+">" + ObjetoReturn.descripcion+"</option>";
 
 			categoria.append(nuevaFila);
 

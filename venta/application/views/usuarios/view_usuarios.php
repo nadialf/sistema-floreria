@@ -29,7 +29,7 @@ function EliminarUsuario(Usuario, id){
     } else{
     } 
   }
-  
+//Prueba Eduardo
 </script>
 <h1 class="page-header"><span class="glyphicon glyphicon-list-alt"></span> Catalogo Usuarios</h1>
 <div id="mensaje"></div>

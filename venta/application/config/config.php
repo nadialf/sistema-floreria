@@ -16,7 +16,7 @@
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/sistema-floreria/floreria/';
+$config['base_url'] = 'http://localhost/sistema-floreria/venta/';
 
 /*
 |--------------------------------------------------------------------------

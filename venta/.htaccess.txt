@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 	
-	#ActivaciÃ³n de Rewrite
+	#Activación de Rewrite
 	RewriteEngine on	
 	
 	RewriteCond $1 !^(index\.php|resources|robots\.txt)

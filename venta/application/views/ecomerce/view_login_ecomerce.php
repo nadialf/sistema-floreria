@@ -39,7 +39,7 @@ var baseurl = "<?php echo base_url(); ?>";
 							<input type="email" id="txtEmail" required name="txtEmail" placeholder="Email" />
 							<input type="password" id="txtPasswordE" required name="txtPasswordE" placeholder="Password" />
 							
-							<button type="submit" class="btn btn-default">Iniciar Secion</button>
+							<button type="submit" class="btn btn-default">Iniciar Sesión</button>
 						</form>
 					</div><!--/login form-->
 				</div>

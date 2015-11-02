@@ -31,7 +31,8 @@ class ecomerce_model extends CI_Model {
 		return $query->result();
 	}
 	public function TraeCategoriaLimit(){
-		$sql="select * from categorias ORDER BY RAND() limit 5";
+		$sql="select * from categorias limit 7";
+		$categorias = empty($categorias) ? 'desc' : $categorias;
 		$query=$this->db->query($sql);
 		return $query->result();
 	}

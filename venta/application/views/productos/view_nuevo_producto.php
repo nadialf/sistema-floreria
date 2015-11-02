@@ -2,8 +2,6 @@
 
 <input type="hidden" name="cat" id="cat" value="<?php echo @$productos[0]->id_categoria; ?>"> 
 
-<input type="hidden" name="subcat" id="subcat" value="<?php echo @$productos[0]->id_subcategoria; ?>">
-
 <input type="hidden" name="prov" id="prov" value="<?php echo @$productos[0]->id_proveedor; ?>"> 
 
 <script type="text/javascript">
@@ -11,8 +9,6 @@
   var baseurl = "<?php echo base_url(); ?>";
 
   var id_categoria  = 0;
-
-  var id_subcat     = 0;
 
   var idprov        = 0;
 
@@ -26,15 +22,11 @@
 
     id_categoria = 0;
 
-    id_subcat    = 0;
-
     idprov       = 0;
 
   }else{
 
     id_categoria     = document.getElementById("cat").value;
-
-    id_subcat        = document.getElementById("subcat").value;
 
     idprov           = document.getElementById("prov").value;
 
@@ -70,25 +62,26 @@
 
   );
 
-  //Descripcion
+  //Nombre
 
-  $Descripcion  = array(
+  $Nombre  = array(
 
-  'name'        => 'descripcion',
+  'name'        => 'nombre',
 
-  'id'          => 'descripcion',
+  'id'          => 'nombre',
 
   'size'        => 50,
 
-  'value'       => set_value('descripcion',@$productos[0]->descripcion),
+  'value'       => set_value('nombre',@$productos[0]->nombre),
 
-  'rows'        => '2',
+  //'rows'        => '1',
+  'type'        => 'text',
 
   'class'       => 'form-control',
 
   );
 
-  //
+  //Precio Compra
 
   $PCompra      = array(
 
@@ -108,6 +101,7 @@
 
   );
 
+  //Precio Venta
   $PVenta      = array(
 
   'name'        => 'pventa',
@@ -126,30 +120,9 @@
 
   );
 
-  $OpcionesUnida= array(
-
-  '0'                 => '---Elige Unidad de Media---',
-
-  'Unidad/Pza'        => 'Unidad/Pza',
-
- // 'Litro'             => 'Litro',
-
- // 'Kilo'              => 'Kilo',
-
-  );
 
 
-
-  $Inventariable  = array(
-
-  '0'             => '---Elegir Opción---',
-
-  '1'             => 'Si',
-
-  '2'             => 'No',
-
-  );
-
+  //Stock Mínimo
   $Stock      = array(
 
   'name'        => 'stock',
@@ -168,7 +141,27 @@
 
   );
 
+   $TipoPlanta= array(
+  '0'                 => '---Elige el tipo de planta---',
+  'Anúal'                         => 'Anúal',
+  'Aromática'                     => 'Aromática',
+  'Carnivora'                     => 'Carnivora',
+  'De interior'                   => 'De interior',
+  'De invernadero'                => 'De invernadero',
+  'Medicinal'                     => 'Medicinal',
+  'Trepadora'                     => 'Trepadora',
+  );
 
+$TipoProveedor= array(
+  '0'                 => '---Elige el proveedor---',
+  'Vivero San Lorenzo'            => 'Vivero San Lorenzo',
+  'Vivero Forestal Encanto'       => 'Vivero Forestal Encanto',
+  'Monte Verde'                   => 'Monte Verde ',
+  'Grupo Fioretto'                => 'Grupo Fioretto',
+  'Flore Galli'                   => 'Flore Galli',
+  'Floreria Chic'                 => 'Floreria Chic',
+  'Campomanes'                    => 'Campomanes',
+  );
 
 ?>
 
@@ -194,11 +187,11 @@
 
   <div class="form-group">
 
-    <label for="descripcion" class="col-lg-3 control-label">Descripción:</label>
+    <label for="nombre" class="col-lg-3 control-label">Nombre:</label>
 
     <div class="col-lg-3">
 
-      <?php  echo form_textarea($Descripcion); ?>
+      <?php  echo form_input($Nombre); ?>
 
     </div>
 
@@ -236,57 +229,16 @@
 
   <div class="form-group">
 
-    <label for="unidadmedida" class="col-lg-3 control-label">Unidad de Medida:</label>
+    <label for="tipoPlanta" class="col-lg-3 control-label">Tipo de planta:</label>
 
     <div class="col-lg-3">
 
-      <?php echo  form_dropdown('unidadmedida', $OpcionesUnida, set_value('unidadmedida',@$productos[0]->unidadmedida),'class="form-control" id="unidadmedida"'); ?>
+      <?php echo  form_dropdown('tipoPlanta', $TipoPlanta, set_value('tipoPlanta',@$productos[0]->tipoPlanta),'class="form-control" id="unidadmedida"'); ?>
 
     </div>
 
   </div>
 
-
-
-  <div class="form-group">
-
-    <label for="categoria" class="col-lg-3 control-label">Categoria:</label>
-
-    <div class="col-lg-3">
-      <select name="categoria" id="categoria" class="form-control">
-          </select>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="form-group">
-
-    <label for="subcategoria" class="col-lg-3 control-label">Sub-Categoria:</label>
-
-    <div class="col-lg-3">
-
-      <select name="subcategoria" id="subcategoria" class="form-control"></select>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="form-group">
-
-    <label for="inventario" class="col-lg-3 control-label">El Producto es Inventariable:</label>
-
-    <div class="col-lg-3">
-
-      <?php echo  form_dropdown('inventario', $Inventariable, set_value('inventario',@$productos[0]->inventariable),'class="form-control" id="inventario"'); ?>
-
-    </div>
-
-  </div>
 
 
 
@@ -304,17 +256,18 @@
 
 
 
-   <div class="form-group">
+  <div class="form-group">
 
-    <label for="proveedor" class="col-lg-3 control-label">Proveedor:</label>
+    <label for="proveedor" class="col-lg-3 control-label">Nombre del proveedor:</label>
 
     <div class="col-lg-3">
 
-      <select name="proveedor" id="proveedor" class="form-control"></select>
+      <?php echo  form_dropdown('proveedor', $TipoProveedor, set_value('proveedor',@$productos[0]->proveedor),'class="form-control" id="proveedor"'); ?>
 
     </div>
 
   </div>
+
 
  
 
@@ -339,6 +292,3 @@
   <hr/>
 
 </form>   
-
-
-

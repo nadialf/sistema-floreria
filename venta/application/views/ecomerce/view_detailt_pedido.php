@@ -1,6 +1,7 @@
 <section id="cart_items">
 <div class="table-responsive cart_info">
- <table class="table table-condensed total-result" border=0>
+<h1>DETALLES DEL PEDIDO</h1>
+<table class="table table-condensed total-result" border=0>
 			<tr>
 				<td style="text-align:right;font-weight: bold;">Nº. Cliente:</td>
 				<td style="text-align:left"><?php echo $MisDatosClient->CODIGO_CLIENTE; ?></td>

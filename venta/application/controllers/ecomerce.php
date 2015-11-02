@@ -162,6 +162,12 @@ class ecomerce extends CI_Controller {
 						);
 						$this->ordencompra_model->saveOrderPartidas($arrayPartidas);
 					endforeach;
+
+				foreach ($this->cart->contents() as $item){
+					$this->ecomerce_model->disminuirProducto($item['rowid'],$item['qty']);
+				}
+
+
 				}
 				$this->cart->destroy();
 				$this->load->view('constant');
@@ -261,7 +267,6 @@ class ecomerce extends CI_Controller {
 	}
 	public function Login(){
 		$Login 		= json_decode($this->input->post('LoginPost'));
-		//$Login      = json_decode('{"Email":"crisant_89@hotmail.com","Password":"1234"}');
 		$response = array (
 				"login"     => false,
 				"campo"     => "",

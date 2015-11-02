@@ -8,7 +8,7 @@ function Pedido(){
 </script>
 
 <section id="cart_items">
- <h1>Mis Pedidos</h2>
+ <h2>Mis Pedidos</h2>
 <div class="table-responsive cart_info">
 <table  class="table table-condensed">
 <thead>

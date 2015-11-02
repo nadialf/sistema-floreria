@@ -102,8 +102,9 @@
 								<li><a href="<?php echo base_url()?>ecomerce/Logout"><i class="fa fa-user"></i> Cerrar Sesión</a></li>
 								<?php }else{ ?>
 								<li><a href="<?php echo base_url()?>ecomerce/LoginOut"><i class="fa fa-lock"></i> Cliente</a></li>
-								<?php } ?>
 								<li><a href="<?php echo base_url()?>login"><i class="fa fa-lock"></i> Administrador</a></li>
+								<?php } ?>
+								
 							</ul>
 						</div>
 					</div>

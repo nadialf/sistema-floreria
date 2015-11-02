@@ -28,7 +28,7 @@ $config['base_url'] = 'http://localhost/sistema-floreria/venta/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------

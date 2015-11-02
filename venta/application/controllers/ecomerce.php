@@ -163,8 +163,8 @@ class ecomerce extends CI_Controller {
 						$this->ordencompra_model->saveOrderPartidas($arrayPartidas);
 					endforeach;
 
-				foreach ($this->cart->contents() as $item){
-					$this->ecomerce_model->disminuirProducto($item['rowid'],$item['qty']);
+				foreach ($this->cart->contents() as $items){
+					$this->ecomerce_model->disminuirProducto($items['id'],$items['qty']);
 				}
 
 
@@ -179,7 +179,7 @@ class ecomerce extends CI_Controller {
 				$this->load->view('ecomerce/view_footer'); 
 				
 
-				$configGmail = array(
+				/*$configGmail = array(
 					'protocol'  => 'smtp',
 					'smtp_host' => 'ssl://smtp.gmail.com',
 					'smtp_port' => 465,
@@ -194,7 +194,7 @@ class ecomerce extends CI_Controller {
 				$this->email->to($this->session->userdata('EMAIL'));
 				$this->email->subject('Pedido Nº:'.$saveOrderDocument);
 				$this->email->message('Se Creo el Pedido:<strong>'.$saveOrderDocument.'</strong>');
-				$this->email->send();
+				$this->email->send();*/
 		}else{
 				$this->load->view('constant');
 				$data['categorias'] = $this->categorias_model->ListarCategorias();

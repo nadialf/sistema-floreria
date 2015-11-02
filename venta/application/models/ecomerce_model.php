@@ -16,10 +16,16 @@ class ecomerce_model extends CI_Model {
 	 }
 
 	  public function disminuirProducto($id, $cantidad){
-	 	$sql="update productos set cantidad=cantidad-".$cantidad." where id='".$id."'";
-	 	$query=$this->db->query($sql);
-	 	//echo("<script>console.log('query:  ".$sql."');</script>");
-	 	return true;
+	 	$this->db->select('cantidad');
+		$this->db->from('productos');
+		$this->db->where('id', $id);
+		$query = $this->db->get();
+		foreach($query->result() as $row) {
+			$cantidadBD = $row->cantidad;
+		}
+		$newCatidad = $cantidadBD - $cantidad;
+		$this->db->where('id =', $id);
+		$this->db->update('productos', array('cantidad' => $newCatidad));
 	}
 
      public function ListProductos($limit, $offset){

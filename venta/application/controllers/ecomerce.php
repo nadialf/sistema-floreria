@@ -260,8 +260,8 @@ class ecomerce extends CI_Controller {
 		 
 	}
 	public function Login(){
-		//$Login 		= json_decode($this->input->post('LoginPost'));
-		$Login      = json_decode('{"Email":"crisant_89@hotmail.com","Password":"1234"}');
+		$Login 		= json_decode($this->input->post('LoginPost'));
+		//$Login      = json_decode('{"Email":"crisant_89@hotmail.com","Password":"1234"}');
 		$response = array (
 				"login"     => false,
 				"campo"     => "",

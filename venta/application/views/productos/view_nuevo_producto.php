@@ -229,6 +229,13 @@ $TipoProveedor= array(
       <option>-- Tipo Planta --</option>
       <option value="1" name="1">Anuál</option>
       <option value="2" name="2">Aromática</option>
+      <option value="3" name="3">Carnivora</option>
+      <option value="4" name="4">De invierno</option>
+      <option value="5" name="5">De invernadero</option>
+      <option value="6" name="6">Medicinal</option>
+      <option value="7" name="7">Trepadora</option>
+
+
     </select>
 
   </div>
@@ -267,8 +274,12 @@ $TipoProveedor= array(
     <select name="proveedor" class="col-lg-3">
       <option>-- Elegir Opción --</option>
       <option value="1" name="1">Vivero San Lorenzo</option>
-      <option value="2" name="2">Vivero Forestal</option>
+      <option value="2" name="2">Vivero Forestal Encanto</option>
       <option value="3" name="3">Monte Verde</option>
+      <option value="4" name="4">Grupo Fioretto</option>
+      <option value="5" name="5">Flore Galli</option>
+      <option value="6" name="6">Floreria Chic</option>
+      <option value="7" name="7">Campomanes</option>
     </select>
 
   </div>

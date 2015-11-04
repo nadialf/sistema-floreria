@@ -54,6 +54,19 @@ class ordencompra_model extends CI_Model {
 
 	}
 
+	public function aumentarProducto($descripcion, $cantidad){
+	 	$this->db->select('cantidad');
+		$this->db->from('productos');
+		$this->db->where('descripcion', $descripcion);
+		$query = $this->db->get();
+		foreach($query->result() as $row) {
+			$cantidadBD = $row->cantidad;
+		}
+		$newCatidad = $cantidadBD + $cantidad;
+		$this->db->where('descripcion =', $descripcion);
+		$this->db->update('productos', array('cantidad' => $newCatidad));
+	}
+
 	
 
 }

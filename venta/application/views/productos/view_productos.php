@@ -76,6 +76,7 @@ function EliminarProducto(producto, id,codigo){
 
  	 	<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Nuevo Producto</button>
 
+
  	 </a>  
 
  	 </p>
@@ -115,8 +116,8 @@ function EliminarProducto(producto, id,codigo){
 		<tbody>
 
 			<?php 
-				$TipoPlanta = array(1 => "Anúal", 2 => "Aromatica", 3 => "Carnivora", 4 => "Interior", 5 => "Invernadero", 6 => "Medicinal", 5 => "Trepadora");
-				$Proveedor = array(1 => "San lorenzo", 2 => "Bivero Forestal Encanto", 3 => "Monte Verde", 4 => "Grupo Fioeretto", 5 => "Flore Galli", 6 => "Floreria Chic", 7 => "Campomanes");
+				$TipoPlanta = array(1 => "Anúal", 2 => "Aromática", 3 => "Carnivora", 4 => "De interior", 5 => "De invernadero", 6 => "Medicinal", 7 => "Trepadora");
+				$Proveedor = array(1 => "Vivero San lorenzo", 2 => "Vivero Forestal Encanto", 3 => "Monte Verde", 4 => "Grupo Fioretto", 5 => "Flore Galli", 6 => "Floreria Chic", 7 => "Campomanes");
 			?> 
 			<?php foreach($query as $row):
 					$codigo       = base64_encode($row->codigo);

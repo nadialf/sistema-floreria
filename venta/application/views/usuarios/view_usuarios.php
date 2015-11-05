@@ -58,7 +58,7 @@ function EliminarUsuario(Usuario, id){
 						echo '<td>';
 						echo '<a href=""><button type="button" title="Editar Usuario" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-edit"></span></button></a> &nbsp;';
 						?>
-						<button type="button"  title="Eliminar Usuario" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+						<button onclick="EliminarUsuario('<?php echo $usuario->NOMBRE; ?>','<?php echo $idusuario; ?>');" type="button"  title="Eliminar Usuario" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
 						<?php
 						echo '</td>';
 						echo '<td>'.$usuario->NOMBRE.' '.$usuario->APELLIDOS.'</td>';

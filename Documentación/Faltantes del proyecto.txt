@@ -1,0 +1,8 @@
+*Compra en linea directa 
+*Publico en general en las ventas(cuando se selecciona al cliente que sea publico en general, para no agregar los datos).
+*Usuarios: restricciones de usuarios(validar datos).
+*Productos: Que sean estaticos los productos(categorias y proovedores). 
+*La compra en ves de ser de cliente va a ser una compra a proovedor(se selecciona la flor, el proovedor y aumentar el stock). 
+*Omitir reporte por empleado. 
+*Menu de cliente: el catalogo, mis pedidos y el carrito(cada usuario solo podrá consultar sus pedidos).
+*Menu del vendedor: ventas y cliente. 

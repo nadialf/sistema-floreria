@@ -1,0 +1,13 @@
+*Catálogo de flores
+*Carrito de compras
+*Control de empleados (agregar, eliminar, modificar, consultar)
+*Control de clientes (agregar, eliminar, modificar, consultar -  uso de tarjeta de crédito – opcional el registro de clientes en físico)
+*Control de venta 
+*Para compras en línea, cliente debe estar registrado
+*Después de 5 compras Y la suma de compras sea mayor $1000 se aplica el 15% de descuento
+*Reporte de ventas por empleado (Mensual - Sólo administrador)
+*Reporte de ventas general de la tienda ([Flor | Empleado | Fecha] Mensual y Anual - Sólo administrador)
+*Stock de cada tipo de flores (Vista de tipos de flores y numero de existentes)
+*Control de proveedores ([Proveedor |Tipo de flor | Compradas |Vendidas | Perdidas | Comentarios])
+*Reporte de ventas a cliente ([Cliente | Tipo de flor | Fecha de compra])
+*Generación de ticket de venta

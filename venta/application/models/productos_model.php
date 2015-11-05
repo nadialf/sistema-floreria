@@ -105,7 +105,7 @@ class productos_model extends CI_Model {
 							'id_categoria' => $tipoPlanta,
 							'id_proveedor' =>$proveedor);
 		$this->db->insert('productos', $arrayName);
-		redirect('productos/index');
+		redirect('productos');
 	}
 
 	public function UpdateProductos($arrayProductos, $id){

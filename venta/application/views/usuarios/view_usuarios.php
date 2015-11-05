@@ -65,7 +65,7 @@ function EliminarUsuario(Usuario, id){
 						echo '<td>'.$usuario->EMAIL.'</td>';
 						echo '<td>';
 						if($usuario->TIPO==1){
-							echo "Administrador";
+							echo "Usuario";
 						}else{
 							echo "Vendedor";
 						}
